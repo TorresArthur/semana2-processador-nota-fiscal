@@ -24,8 +24,12 @@ public class Pedido {
   }
 
   public BigDecimal getTotal() {
+    if (itens != null){
     return itens.stream().map(ItemPedido::getSubtotal)
         .reduce(BigDecimal.ZERO, BigDecimal::add);
+  }else {
+      throw new IllegalArgumentException("A Lista está vazia!");
+    }
   }
 
   @Override

@@ -5,8 +5,10 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.io.Serializable;
 
-public class LeitorFonteDadosXML implements LeitorFonteDados {
+public class LeitorFonteDadosXML implements LeitorFonteDados, Serializable {
+  private static final long serialVersionUID = 1L;
 
   @Override
   public Pedido recupera(String nomeArquivo) {

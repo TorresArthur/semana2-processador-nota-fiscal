@@ -18,8 +18,6 @@ public class Main {
       System.out.println("\n\tClasse fiscal: " + item.getClasseFiscal());
       System.out.println("\tSubtotal: " + item.getSubTotal());
     }
-
-
   }
 
   private static String obtemNomeArquivo(String[] args) {
